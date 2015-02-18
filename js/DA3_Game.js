@@ -29,7 +29,9 @@ GrudgeMatch.Game.prototype = {
     create: function () {
 
         //  Honestly, just about anything could go here. It's YOUR game after all. Eat your heart out!
-
+		map = this.game.add.tilemap('map');
+		map.addTilesetImage('greenBlock', 'greenBlock_32x32');
+		var player = CatFighter(this.game);
     },
 
     update: function () {
