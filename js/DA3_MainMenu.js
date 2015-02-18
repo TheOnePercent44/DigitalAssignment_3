@@ -37,7 +37,7 @@ GrudgeMatch.MainMenu.prototype = {
 		//this.music.stop();
 
 		//	And start the actual game
-		this.state.start('GameWorld');
+		this.state.start('Game');
 
 	}
 
