@@ -38,6 +38,12 @@ GrudgeMatch.Game.prototype = {
 		
 		map.setCollision(1, true, 'Platforms', true);
 		
+		
+		//this.game.camera.setSize(100, 100);
+		//this.game.camera.bounds = new Phaser.Rectangle(0, 0, 3216,3216);
+		this.game.camera.follow(player, this.game.camera.FOLLOW_PLATFORMER);
+		//this.game.camera.update();
+		
 		this.game.physics.arcade.gravity.y = 100;
     },
 
