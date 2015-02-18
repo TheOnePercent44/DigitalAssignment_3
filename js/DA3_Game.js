@@ -36,6 +36,8 @@ GrudgeMatch.Game.prototype = {
 		layer = map.createLayer('Platforms');
 		var player = Catfighter(this.game);
 		
+		map.setCollision(1, true, 'Platforms', true);
+		
 		this.game.physics.arcade.gravity.y = 100;
     },
 
