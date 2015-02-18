@@ -32,7 +32,7 @@ GrudgeMatch.Game.prototype = {
 		map = this.game.add.tilemap('map');
 		map.addTilesetImage('greenBlock_32x32', 'greenBlock_32x32');
 		var layer = map.createLayer('Tile Layer 1');
-		var player = CatFighter(this.game);
+		var player = Catfighter(this.game);
     },
 
     update: function () {
@@ -53,7 +53,7 @@ GrudgeMatch.Game.prototype = {
 
 };
 
-function Catfighter(game)
+/*function Catfighter(game)
 {
 	this.game = game;
 	this.sprite = this.game.add.sprite(15, 15, 'catsheet', 0);
@@ -63,4 +63,4 @@ function Catfighter(game)
 	this.sprite.animations.add('walk', [16, 17, 18, 19, 20, 21, 22, 23], 20, true);
 	this.sprite.animations.play('idle');
 	return this;
-}
+}*/
