@@ -5,7 +5,7 @@ GrudgeMatch.MainMenu = function (game) {
 
 };
 
-RPGGame.MainMenu.prototype = {
+GrudgeMatch.MainMenu.prototype = {
 
 	create: function () {
 

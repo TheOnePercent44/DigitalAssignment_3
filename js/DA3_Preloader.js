@@ -8,7 +8,7 @@ GrudgeMatch.Preloader = function (game) {
 
 };
 
-RPGGame.Preloader.prototype = {
+GrudgeMatch.Preloader.prototype = {
 
 	preload: function () {
 
@@ -22,28 +22,21 @@ RPGGame.Preloader.prototype = {
 		//	This sets the preloadBar sprite as a loader sprite.
 		//	What that does is automatically crop the sprite from 0 to full-width
 		//	as the files below are loaded in.
-		this.load.setPreloadSprite(this.preloadBar);
+		//this.load.setPreloadSprite(this.preloadBar);
 
 		//	Here we load the rest of the assets our game needs.
 		//	As this is just a Project Template I've not provided these assets, swap them for your own.
 		//this.load.image('titlepage', 'images/title.jpg');
-		this.load.atlas('playButton', 'images/play_button.png', 'images/play_button.json');
+		//this.load.atlas('playButton', 'images/play_button.png', 'images/play_button.json');
+		this.load.spritesheet('button', 'assets/flixel-button.png', 80, 20);
 		/*this.load.spritesheet('button', 'assets/flixel-button.png', 80, 20);
 		this.load.audio('titleMusic', ['assets/song21_0.mp3']);
 		this.load.audio('gameMusic', ['assets/Iwan Gabovitch - Dark Ambience Loop.mp3']);
 		//this.load.bitmapFont('caslon', 'fonts/caslon.png', 'fonts/caslon.xml');
-		this.load.image('stonewalls', 'assets/s_walls_only.png');
-		this.load.image('doors_ud', 'assets/s_doors_udonly.png');
-		this.load.image('doors_lr', 'assets/s_doors_lronly.png');
-		this.load.tilemap('map', 'assets/RPG_Dungeon3.json', null, Phaser.Tilemap.TILED_JSON);
-		this.load.spritesheet('cat', 'assets/cat.png', 16, 16);
 		this.load.image('barback', 'assets/barbackground_256x32.png');
-		this.load.image('barfore', 'assets/barforeground1_256x32.png');
-		this.load.image('hope', 'assets/enemy_mana_bar_001.png');
-		this.load.image('courage', 'assets/enemy_health_bar_001.png');
-		this.load.image('mummy', 'assets/metalslug_mummy37x45.png');
-		this.load.spritesheet('orangecat', 'assets/orangecat.png', 16, 16);
 		this.load.audio('healnoise', ['assets/healspell2.mp3'])*/
+		this.load.spritesheet('catsheet', 'assets/catfighter description.png', 64, 64);
+		this.load.tilemap('map', 'assets/FighterTest.json', null, Phaser.Tilemap.TILED_JSON);
 		
 		//	+ lots of other required assets here
 

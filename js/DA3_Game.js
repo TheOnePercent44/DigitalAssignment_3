@@ -24,7 +24,7 @@ GrudgeMatch.Game = function (game) {
 
 };
 
-BasicGame.Game.prototype = {
+GrudgeMatch.Game.prototype = {
 
     create: function () {
 

@@ -17,7 +17,7 @@ GrudgeMatch.WinScreen = function (game) {
     this.rnd;       //  the repeatable random number generator (Phaser.RandomDataGenerator)
 };
 
-RPGGame.WinScreen.prototype = {
+GrudgeMatch.WinScreen.prototype = {
 
 	create: function () {
 		var text = this.game.add.text(this.game.camera.width*0.25, this.game.camera.height*0.4, "Congratulations!", { font: "65px Arial", fill: "#FFFFFF", align: "center" });
