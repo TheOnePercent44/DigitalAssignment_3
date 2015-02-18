@@ -27,12 +27,14 @@ GrudgeMatch.Game = function (game) {
 GrudgeMatch.Game.prototype = {
 
     create: function () {
-
+		this.game.physics.startSystem(Phaser.Physics.ARCADE);
         //  Honestly, just about anything could go here. It's YOUR game after all. Eat your heart out!
 		map = this.game.add.tilemap('map');
 		map.addTilesetImage('greenBlock_32x32', 'greenBlock');
 		var layer = map.createLayer('Tile Layer 1');
 		var player = Catfighter(this.game);
+		
+		this.game.physics.arcade.gravity.y = 100;
     },
 
     update: function () {
