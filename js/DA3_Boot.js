@@ -1,10 +1,10 @@
 var GrudgeMatch = {};
 
-RPGGame.Boot = function (game) {
+GrudgeMatch.Boot = function (game) {
 
 };
 
-RPGGame.Boot.prototype = {
+GrudgeMatch.Boot.prototype = {
 
     init: function () {
 
