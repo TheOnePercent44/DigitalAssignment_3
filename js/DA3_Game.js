@@ -30,7 +30,7 @@ GrudgeMatch.Game.prototype = {
 
         //  Honestly, just about anything could go here. It's YOUR game after all. Eat your heart out!
 		map = this.game.add.tilemap('map');
-		map.addTilesetImage('greenBlock_32x32', 'greenBlock_32x32');
+		map.addTilesetImage('greenBlock_32x32', 'greenBlock');
 		var layer = map.createLayer('Tile Layer 1');
 		var player = Catfighter(this.game);
     },
