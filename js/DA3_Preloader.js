@@ -38,6 +38,7 @@ GrudgeMatch.Preloader.prototype = {
 		this.load.spritesheet('catsheet', 'assets/catfighter description.png', 64, 64);
 		this.load.tilemap('map', 'assets/FighterTest.json', null, Phaser.Tilemap.TILED_JSON);
 		this.load.image('greenBlock', 'assets/greenBlock_32x32.png');
+		this.load.image('blueBlock', 'assets/blueBlock_32x32.png');
 		
 		//	+ lots of other required assets here
 
