@@ -41,9 +41,20 @@ function Catfighter(game, xcoord, ycoord)
 		this.sprite.body.velocity.y = 300;
 		this.sprite.animations.play('jumpStart');
 		this.sprite.animations.play('inAir');
+		this.inAir = true;
 	}
 	
-	this.land = function(player, layer)//accepts two arguments for compatibility with collide
+	this.hitLand = function(player, layer)//accepts two arguments for compatibility with collide
+	{
+		if(this.inAir === true)
+		{
+			this.land();
+			this.inAir = false;
+		}
+		else{}//do nothing, let idle or others take care of it
+	}
+	
+	this.land = function()//accepts two arguments for compatibility with collide
 	{
 		this.sprite.animations.play('landing');
 	}
