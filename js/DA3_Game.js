@@ -24,7 +24,7 @@ GrudgeMatch.Game = function (game) {
 
 };
 
-var player;
+var player, layer;
 GrudgeMatch.Game.prototype = {
     create: function () {
 		this.game.physics.startSystem(Phaser.Physics.ARCADE);
@@ -32,7 +32,7 @@ GrudgeMatch.Game.prototype = {
 		map = this.game.add.tilemap('map');
 		map.addTilesetImage('greenBlock_32x32', 'greenBlock');
 		map.addTilesetImage('blueBlock_32x32', 'blueBlock');
-		var layer = map.createLayer('Background');
+		layer = map.createLayer('Background');
 		layer = map.createLayer('Platforms');
 		player = new Catfighter(this.game, 15, 98);
 		layer.resizeWorld();
