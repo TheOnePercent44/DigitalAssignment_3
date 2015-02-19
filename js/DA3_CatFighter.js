@@ -2,6 +2,7 @@ function Catfighter(game, xcoord, ycoord)
 {
 	this.game = game;
 	this.sprite = this.game.add.sprite(xcoord, ycoord, 'catsheet', 0);
+	this.sprite.setAnchor(0.5, 0.5);
 	this.game.physics.enable(this.sprite, Phaser.Physics.ARCADE);
 	this.sprite.body.allowGravity = true;
 	this.sprite.animations.add('idle', [0, 1, 2, 3], 20, true);
