@@ -1,6 +1,8 @@
 function Catfighter(game, xcoord, ycoord)
 {
 	this.game = game;
+	this.inAir = false;
+	this.isAttacking = false;
 	this.sprite = this.game.add.sprite(xcoord, ycoord, 'catsheet', 0);
 	this.sprite.anchor.setTo(0.5, 0.5);
 	this.game.physics.enable(this.sprite, Phaser.Physics.ARCADE);
@@ -10,22 +12,25 @@ function Catfighter(game, xcoord, ycoord)
 	this.sprite.animations.add('jumpStart', [32, 33], 15, false);
 	this.sprite.animations.add('inAir', [34, 35], 15, true);
 	this.sprite.animations.add('landing', [36, 37, 38], 15, false);
-	this.sprite.animations.add('powerHit', [80, 81, 82, 83, 84, 85, 95], 15, false);
+	this.sprite.animations.add('powerHit', [80, 81, 82, 83, 84, 85, 86], 15, false);
 	this.sprite.animations.play('idle');
 	
 	this.idle = function()
 	{
-		if(this.inAir != true)
+		if(this.isAttacking != true)
 		{
-			if(this.sprite.body.velocity.y != 0)
+			if(this.inAir != true)
 			{
-				this.sprite.animations.play('inAir');
-				this.inAir = true;
-			}
-			else
-			{
-				this.sprite.body.velocity.x = 0;
-				this.sprite.animations.play('idle');
+				if(this.sprite.body.velocity.y != 0)
+				{
+					this.sprite.animations.play('inAir');
+					this.inAir = true;
+				}
+				else
+				{
+					this.sprite.body.velocity.x = 0;
+					this.sprite.animations.play('idle');
+				}
 			}
 		}
 	}
@@ -78,6 +83,12 @@ function Catfighter(game, xcoord, ycoord)
 	
 	this.powerHit= function()
 	{
-		this.sprite.animations.play('powerHit');
+		if(this.isAttacking != true)
+		{
+			if(this.inAir != true)
+				this.sprite.animations.play('powerHit');
+			else{}//do the aerial power hit
+			this.isAttacking = true;
+		}
 	}
 }
