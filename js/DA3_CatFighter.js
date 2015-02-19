@@ -14,16 +14,16 @@ function Catfighter(game, xcoord, ycoord)
 	
 	this.idle = function()
 	{
-		this.sprite.body.velocity.x = 0;
-		//if(this.sprite.animations.currentAnim != 'idle')
-		//	this.sprite.animations.stop(null, true);
-		this.sprite.animations.play('idle');
+		if(this.inAir != true)
+		{
+			this.sprite.body.velocity.x = 0;
+			this.sprite.animations.play('idle');
+		}
 	}
 	
 	this.runRight = function()
 	{
 		this.sprite.body.velocity.x = 100;
-		//this.sprite.animations.stop(null, true);
 		this.sprite.animations.play('walk');
 		this.sprite.scale.x = 1;
 	}
@@ -31,7 +31,6 @@ function Catfighter(game, xcoord, ycoord)
 	this.runLeft = function()
 	{
 		this.sprite.body.velocity.x = -100;
-		//this.sprite.animations.stop(null, true);
 		this.sprite.animations.play('walk');
 		this.sprite.scale.x = -1;
 	}
