@@ -50,7 +50,7 @@ GrudgeMatch.Game.prototype = {
     update: function () {
 
         //  Honestly, just about anything could go here. It's YOUR game after all. Eat your heart out!
-		this.game.physics.arcade.collide(player.sprite, layer);
+		this.game.physics.arcade.collide(player.sprite, layer, player.land);
 		
 		if(this.game.input.keyboard.isDown(Phaser.Keyboard.RIGHT))
 		{
@@ -59,6 +59,10 @@ GrudgeMatch.Game.prototype = {
 		else if(this.game.input.keyboard.isDown(Phaser.Keyboard.LEFT))
 		{
 			player.runLeft();
+		}
+		else if(this.game.input.keyboard.isDown(Phaser.Keyboard.UP))
+		{
+			player.jump();
 		}
 		else
 		{

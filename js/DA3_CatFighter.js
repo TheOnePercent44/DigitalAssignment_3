@@ -5,8 +5,11 @@ function Catfighter(game, xcoord, ycoord)
 	this.sprite.anchor.setTo(0.5, 0.5);
 	this.game.physics.enable(this.sprite, Phaser.Physics.ARCADE);
 	this.sprite.body.allowGravity = true;
-	this.sprite.animations.add('idle', [0, 1, 2, 3], 15, true);
+	this.sprite.animations.add('idle', [0, 1, 2, 3], 8, true);
 	this.sprite.animations.add('walk', [16, 17, 18, 19, 20, 21, 22, 23], 15, true);
+	this.sprite.animations.add('jumpStart', [32, 33], 15, false);
+	this.sprite.animations.add('inAir', [34, 35], 15, true);
+	this.sprite.animations.add('landing', [36, 37, 38], 15, false);
 	this.sprite.animations.play('idle');
 	
 	this.idle = function()
@@ -32,5 +35,16 @@ function Catfighter(game, xcoord, ycoord)
 		this.sprite.animations.play('walk');
 		this.sprite.scale.x = -1;
 	}
-	//return this;
+	
+	this.jump = function()
+	{
+		this.sprite.body.velocity.y = 100;
+		this.sprite.animations.play('jumpStart');
+		this.sprite.animations.play('inAir');
+	}
+	
+	this.land = function(player, layer)//accepts two arguments for compatibility with collide
+	{
+		this.sprite.animations.play('landing');
+	}
 }
