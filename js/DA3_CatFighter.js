@@ -16,15 +16,17 @@ function Catfighter(game, xcoord, ycoord)
 		this.sprite.animations.play('idle');
 	}
 	
-	this.runRight = function(xspeed)
+	this.runRight = function()
 	{
-		this.sprite.body.velocity.x = xspeed;
+		this.sprite.animations.stop();
+		this.sprite.body.velocity.x = 50;
 		this.sprite.scale.x = 1;
 	}
 	
-	this.runLeft = function(xspeed)
+	this.runLeft = function()
 	{
-		this.sprite.body.velocity.x = xspeed;
+		this.sprite.animations.stop();
+		this.sprite.body.velocity.x = -50;
 		this.sprite.scale.x = -1;
 	}
 	//return this;

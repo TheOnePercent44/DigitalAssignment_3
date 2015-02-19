@@ -54,11 +54,11 @@ GrudgeMatch.Game.prototype = {
 		
 		if(this.game.input.keyboard.isDown(Phaser.Keyboard.RIGHT))
 		{
-			player.runRight(30);
+			player.runRight();
 		}
 		else if(this.game.input.keyboard.isDown(Phaser.Keyboard.LEFT))
 		{
-			player.runLeft(-30);
+			player.runLeft();
 		}
 		else
 		{
