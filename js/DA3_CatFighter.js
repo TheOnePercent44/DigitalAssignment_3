@@ -38,7 +38,7 @@ function Catfighter(game, xcoord, ycoord)
 	
 	this.jump = function()
 	{
-		this.sprite.body.velocity.y = 100;
+		this.sprite.body.velocity.y = 300;
 		this.sprite.animations.play('jumpStart');
 		this.sprite.animations.play('inAir');
 	}
