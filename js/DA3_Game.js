@@ -60,14 +60,15 @@ GrudgeMatch.Game.prototype = {
 		{
 			player.runLeft();
 		}
+		else if(this.game.input.keyboard.isDown(Phaser.Keyboard.A))
+		{
+			player.powerHit();
+		}
 		else
 		{
 			player.idle();
 		}
-		if(this.game.input.keyboard.isDown(Phaser.Keyboard.A))
-		{
-			player.powerHit();
-		}
+		
 		if(this.game.input.keyboard.isDown(Phaser.Keyboard.UP))
 		{
 			player.jump();
