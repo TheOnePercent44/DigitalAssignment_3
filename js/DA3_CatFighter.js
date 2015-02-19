@@ -10,6 +10,7 @@ function Catfighter(game, xcoord, ycoord)
 	this.sprite.animations.add('jumpStart', [32, 33], 15, false);
 	this.sprite.animations.add('inAir', [34, 35], 15, true);
 	this.sprite.animations.add('landing', [36, 37, 38], 15, false);
+	this.sprite.animations.add('powerHit', [80, 81, 82, 83, 84, 85, 95], 15, false);
 	this.sprite.animations.play('idle');
 	
 	this.idle = function()
@@ -73,5 +74,10 @@ function Catfighter(game, xcoord, ycoord)
 	this.land = function()//accepts two arguments for compatibility with collide
 	{
 		this.sprite.animations.play('landing');
+	}
+	
+	this.powerHit= function()
+	{
+		this.sprite.animations.play('powerHit');
 	}
 }
