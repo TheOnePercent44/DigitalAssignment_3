@@ -17,8 +17,8 @@ function Catfighter(game, xcoord, ycoord)
 	
 	this.idle = function()
 	{
-		if(this.isAttacking != true)
-		{
+		//if(this.isAttacking != true)
+		//{
 			if(this.inAir != true)
 			{
 				if(this.sprite.body.velocity.y != 0)
@@ -32,12 +32,12 @@ function Catfighter(game, xcoord, ycoord)
 					this.sprite.animations.play('idle');
 				}
 			}
-		}
-		else
-		{
-			if(this.sprite.animations.currentFrame == 86)
-				this.isAttacking = false;
-		}
+		//}
+		//else
+		//{
+			//if(this.sprite.animations.currentFrame == 86)
+				//this.isAttacking = false;
+		//}
 	}
 	
 	this.runRight = function()
