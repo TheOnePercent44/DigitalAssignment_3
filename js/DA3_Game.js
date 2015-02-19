@@ -34,7 +34,7 @@ GrudgeMatch.Game.prototype = {
 		map.addTilesetImage('blueBlock_32x32', 'blueBlock');
 		layer = map.createLayer('Background');
 		layer = map.createLayer('Platforms');
-		player = new Catfighter(this.game, 15, 98);
+		player = new Catfighter(this.game, 15, 950);
 		layer.resizeWorld();
 		map.setCollision(1, true, 'Platforms', true);
 		
