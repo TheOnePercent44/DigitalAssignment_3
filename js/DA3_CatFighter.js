@@ -23,16 +23,22 @@ function Catfighter(game, xcoord, ycoord)
 	
 	this.runRight = function()
 	{
-		this.sprite.body.velocity.x = 100;
-		this.sprite.animations.play('walk');
-		this.sprite.scale.x = 1;
+		if(this.inAir != true)
+		{
+			this.sprite.body.velocity.x = 100;
+			this.sprite.animations.play('walk');
+			this.sprite.scale.x = 1;
+		}
 	}
 	
 	this.runLeft = function()
 	{
-		this.sprite.body.velocity.x = -100;
-		this.sprite.animations.play('walk');
-		this.sprite.scale.x = -1;
+		if(this.inAir != true)
+		{
+			this.sprite.body.velocity.x = -100;
+			this.sprite.animations.play('walk');
+			this.sprite.scale.x = -1;
+		}
 	}
 	
 	this.jump = function()
