@@ -33,6 +33,11 @@ function Catfighter(game, xcoord, ycoord)
 				}
 			}
 		}
+		else
+		{
+			if(this.sprite.animations.currentFrame == 86)
+				this.isAttacking = false;
+		}
 	}
 	
 	this.runRight = function()
