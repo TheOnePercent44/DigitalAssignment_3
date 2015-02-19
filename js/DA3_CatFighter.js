@@ -19,14 +19,16 @@ function Catfighter(game, xcoord, ycoord)
 	this.runRight = function()
 	{
 		this.sprite.animations.stop();
-		this.sprite.body.velocity.x = 50;
+		this.sprite.body.velocity.x = 100;
+		this.sprite.animations.play('walk');
 		this.sprite.scale.x = 1;
 	}
 	
 	this.runLeft = function()
 	{
 		this.sprite.animations.stop();
-		this.sprite.body.velocity.x = -50;
+		this.sprite.body.velocity.x = -100;
+		this.sprite.animations.play('walk');
 		this.sprite.scale.x = -1;
 	}
 	//return this;
