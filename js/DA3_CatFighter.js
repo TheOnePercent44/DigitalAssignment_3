@@ -45,6 +45,6 @@ function Catfighter(game, xcoord, ycoord)
 	
 	this.land = function(player, layer)//accepts two arguments for compatibility with collide
 	{
-		this.sprite.animations.play('landing');
+		player.sprite.animations.play('landing');
 	}
 }
