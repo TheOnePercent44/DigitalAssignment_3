@@ -19,9 +19,9 @@ function Catfighter(game, xcoord, ycoord)
 	{
 		this.sprite.body.velocity.x = xspeed;
 		if(xspeed < 0)
-			this.sprite.scale(-1, 1);
+			this.sprite.scale.x = -1;
 		else
-			this.sprite.scale(1, 1);
+			this.sprite.scale.x = 1;
 	}
 	//return this;
 }
