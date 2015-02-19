@@ -18,10 +18,13 @@ function Catfighter(game, xcoord, ycoord)
 	this.runRight = function(xspeed)
 	{
 		this.sprite.body.velocity.x = xspeed;
-		if(xspeed < 0)
-			this.sprite.scale.x = -1;
-		else
-			this.sprite.scale.x = 1;
+		this.sprite.scale.x = 1;
+	}
+	
+	this.runLeft = function(xspeed)
+	{
+		this.sprite.body.velocity.x = xspeed;
+		this.sprite.scale.x = -1;
 	}
 	//return this;
 }
