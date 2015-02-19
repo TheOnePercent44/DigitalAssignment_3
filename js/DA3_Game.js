@@ -64,7 +64,7 @@ GrudgeMatch.Game.prototype = {
 		{
 			player.idle();
 		}
-		if(this.game.input.keyboard.isDown(Phaser.Keyboard.A)
+		if(this.game.input.keyboard.isDown(Phaser.Keyboard.A))
 		{
 			player.powerHit();
 		}
