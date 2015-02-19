@@ -18,7 +18,7 @@ GrudgeMatch.Game = function (game) {
     this.particles; //  the particle manager (Phaser.Particles)
     this.physics;   //  the physics manager (Phaser.Physics)
     this.rnd;       //  the repeatable random number generator (Phaser.RandomDataGenerator)
-
+	this.player;
     //  You can use any of these from any function within this State.
     //  But do consider them as being 'reserved words', i.e. don't create a property for your own game called "world" or you'll over-write the world reference.
 
@@ -34,14 +34,14 @@ GrudgeMatch.Game.prototype = {
 		map.addTilesetImage('blueBlock_32x32', 'blueBlock');
 		var layer = map.createLayer('Background');
 		layer = map.createLayer('Platforms');
-		var player = Catfighter(this.game);
+		this.player = Catfighter(this.game);
 		
 		map.setCollision(1, true, 'Platforms', true);
 		
 		
 		//this.game.camera.setSize(100, 100);
 		//this.game.camera.bounds = new Phaser.Rectangle(0, 0, 3216,3216);
-		this.game.camera.follow(player, this.game.camera.FOLLOW_PLATFORMER);
+		this.game.camera.follow(this.player, this.game.camera.FOLLOW_PLATFORMER);
 		//this.game.camera.update();
 		
 		this.game.physics.arcade.gravity.y = 100;
