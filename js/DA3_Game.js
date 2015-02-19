@@ -24,8 +24,8 @@ GrudgeMatch.Game = function (game) {
 
 };
 
+var player;
 GrudgeMatch.Game.prototype = {
-	var player;
     create: function () {
 		this.game.physics.startSystem(Phaser.Physics.ARCADE);
         //  Honestly, just about anything could go here. It's YOUR game after all. Eat your heart out!
