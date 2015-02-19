@@ -16,8 +16,16 @@ function Catfighter(game, xcoord, ycoord)
 	{
 		if(this.inAir != true)
 		{
-			this.sprite.body.velocity.x = 0;
-			this.sprite.animations.play('idle');
+			if(this.sprite.body.velocity.y != 0)
+			{
+				this.sprite.animations.play('inAir');
+				this.inAir = true;
+			}
+			else
+			{
+				this.sprite.body.velocity.x = 0;
+				this.sprite.animations.play('idle');
+			}
 		}
 	}
 	
