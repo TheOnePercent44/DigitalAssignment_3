@@ -12,8 +12,8 @@ function Catfighter(game, xcoord, ycoord)
 	this.idle = function()
 	{
 		this.sprite.body.velocity.x = 0;
-		if(this.sprite.animations.currentAnim != 'idle')
-			this.sprite.animations.stop(null, true);
+		//if(this.sprite.animations.currentAnim != 'idle')
+		//	this.sprite.animations.stop(null, true);
 		this.sprite.animations.play('idle');
 	}
 	
